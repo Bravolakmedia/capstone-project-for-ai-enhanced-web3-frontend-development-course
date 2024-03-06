@@ -97,3 +97,8 @@ footer {
         color: rgb(235, 104, 126); /* Set the color of the email link to pink on Android */
     }
 }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #020405; /* Dark background color */
+    color: #e70b0b; /* White text color */
+}
