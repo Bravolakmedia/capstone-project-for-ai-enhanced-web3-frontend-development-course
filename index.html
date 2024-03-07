@@ -4,67 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Token Minter dApp</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CDN link for styling and responsiveness -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-TyE/1XOKSo6BPSD2eStLWIug+PjLr46RQb/wx5h8zo0rL4/dlTkFaezeDwiEZybp" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Welcome to our Token Minter dApp.</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mint">Mint Tokens</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Home Section -->
-        <article id="home">
-            <h2>Introduction to Token Minting</h2>
-            <p>This dApp allows users to mint their own tokens on the blockchain.</p>
-        </article>
-
-        <!-- Mint Section -->
-        <section id="mint">
-            <h2>Mint Your Tokens</h2>
-            <form action="#" id="mintForm">
-                <!-- Input fields for email and token amount with enforced data types -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-            
-                <label for="tokenAmount">Token Amount:</label>
-                <input type="number" id="tokenAmount" placeholder="Token amount" required>
-            
-                <!-- Mint button -->
-                <button type="submit">Mint</button>
-            </form>
-            
-        </section>
-<!-- Token Image -->
-<img src="/media/image/token minter.jpg" alt="Token Image" style="max-width: 100%; height: auto;">
-
-
-        <!-- About Section -->
-        <aside>
-            <h3>About</h3>
-            <p>Learn more about our dApp, its purpose and how it works.</p>
-            <h3>Learn More:</h3>
-            <p>Explore more about blockchain technology.</p>
-        </aside>
-        <!-- Display Minted Amount -->
-    <div id="mintedAmount"></div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Contact us at <a href="mailto:hello@dProgrammingUniversity.com">hello@dProgrammingUniversity.com</a></p>
-        <p>Olukosi I.B</p>
-        <!-- Button to toggle dark mode -->
-        <button id="toggleDarkModeButton">Toggle Dark Mode</button>
-    </footer>
-    
-    <script src="app.js" defer></script>
+    <div id="root"></div>
+    <script src="/App.js"></script>
 </body>
 </html>
