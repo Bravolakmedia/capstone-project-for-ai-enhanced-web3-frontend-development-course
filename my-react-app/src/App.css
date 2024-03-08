@@ -1,38 +1,123 @@
-.App {
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #91b5e0; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* Home Section */
+#home {
+  color: #333; /* Dark text color */
+}
+
+/* Mint Section */
+#mint {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+}
+
+#mint form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Token Image */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* About Section */
+aside {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Footer Section */
+footer {
+  background-color: #020405; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  main {
+      padding: 1rem;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* Adjust other styles as needed for smaller screens */
+  body {
+      background-color: #8fcf8f; /* Light green background color for Android */
+  }
+  /* Change email color on Android */
+  footer a {
+      color: rgb(235, 104, 126); /* Set the color of the email link to pink on Android */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #020405; /* Dark background color */
+  color: #e70b0b; /* White text color */
 }
+/* Additional styles for specific sections or elements can go here */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  main {
+      padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Adjust other styles as needed for smaller screens */
+  body {
+      background-color: #8fcf8f; /* Light green background color for Android */
+  }
+
+  /* Change email color on Android */
+  footer a {
+      color: rgb(235, 104, 126); /* Set the color of the email link to pink on Android */
   }
 }

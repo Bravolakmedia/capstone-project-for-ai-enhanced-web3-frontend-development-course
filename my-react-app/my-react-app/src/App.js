@@ -10,10 +10,8 @@ function App() {
 
     // Function to toggle between night and dark mode
     const toggleDarkMode = () => {
-        setDarkMode((prevDarkMode) => !prevDarkMode);
-        document.body.classList.toggle('dark-mode', darkMode); // Toggle the 'dark-mode' class on the body element
-      };
-      
+        setDarkMode(!darkMode);
+    };
 
     // Function to handle token minting
     const handleMinting = async (event) => {
@@ -73,12 +71,6 @@ function App() {
                 </button>
             </header>
             <main>
-                {/* Home Section */}
-                <section id="home">
-                    <a href="#home">Home</a>
-                    <p>Welcome to our Token Minter dApp. Mint your tokens and enjoy the benefits!</p>
-                </section>
-
                 {/* Mint Section */}
                 <section id="mint">
                     <h2>Mint Your Tokens</h2>
@@ -107,20 +99,9 @@ function App() {
                         {/* Mint button */}
                         <button type="submit">Mint</button>
                     </form>
-                    <img src="/token minter.jpg" alt="Token Image" />
                 </section>
-
-                {/* About Section */}
-                <section id="about">
-                <a href="#about">About Us</a>
-                    <p>
-                        Learn more about our company and how we are revolutionizing the world of token minting.
-                    </p>
-                </section>
-
                 {/* Display Minted Amount */}
                 <div id="mintedAmount">{mintedAmount}</div>
-
                 {/* Display Total Minted */}
                 <div>Total Minted: {totalMinted} tokens</div>
             </main>
@@ -136,3 +117,4 @@ function App() {
 }
 
 export default App;
+
