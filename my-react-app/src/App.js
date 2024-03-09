@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -64,8 +65,29 @@ function App() {
         return wallet === localStorage.getItem('lastMintedWallet');
     };
 
-    return (
-        <div className={darkMode ? 'dark-mode' : ''}>
+    const [cryptoPrices, setCryptoPrices] = useState(null);
+
+  // Function to fetch crypto prices from CoinGecko API
+const fetchCryptoPrices = async () => {
+    try {
+      const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,jupiter,saros,bonk&vs_currencies=usd');
+      console.log('Crypto Prices Response:', response.data);
+      setCryptoPrices(response.data);
+    } catch (error) {
+      console.error('Error fetching crypto prices:', error.message);
+    }
+  };
+  
+
+  // useEffect to fetch crypto prices when the component mounts
+  useEffect(() => {
+    fetchCryptoPrices();
+  }, []);
+
+  const supportedCoins = ['bitcoin', 'ethereum', 'solana', 'jupiter', 'saros', 'bonk'];
+
+  return (
+    <div className={darkMode ? 'dark-mode' : ''}>
             <header>
                 <h1>Welcome to our Token Minter dApp.</h1>
                 <button id="toggleDarkModeButton" onClick={toggleDarkMode}>
@@ -120,6 +142,19 @@ function App() {
 
                 {/* Display Minted Amount */}
                 <div id="mintedAmount">{mintedAmount}</div>
+{/* Crypto Prices Section */}
+<section id="cryptoPrices">
+        <h2>Crypto Prices</h2>
+        {cryptoPrices && (
+          <ul>
+            {supportedCoins.map((coin) => (
+              <li key={coin}>
+                {coin.charAt(0).toUpperCase() + coin.slice(1)}: ${cryptoPrices[coin]?.usd}
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
 
                 {/* Display Total Minted */}
                 <div>Total Minted: {totalMinted} tokens</div>
