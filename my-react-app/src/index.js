@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
+import ReactDOM from 'react-dom';
 import App from './App';
+import './index.css'; // Import global styles
+import './App.css'; // Import component-specific styles
+
+import { ApolloProvider } from '@apollo/client'; // Import ApolloProvider
+import client from './apollo'; // Import Apollo Client instance
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ApolloProvider client={client}> {/* Wrap your App component with ApolloProvider and pass the client */}
+      <App />
+    </ApolloProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
