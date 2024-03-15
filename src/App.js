@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -10,8 +10,13 @@ function App() {
 
     // Function to toggle between night and dark mode
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-    };
+        console.log('Toggling dark mode. Current value:', darkMode);
+        setDarkMode((prevDarkMode) => !prevDarkMode);
+        console.log('New value:', !darkMode);
+        document.body.className.toggle('dark-mode');
+      };
+      
+
 
     // Function to handle token minting
     const handleMinting = async (event) => {
@@ -63,6 +68,7 @@ function App() {
     };
 
     return (
+        
         <div className={darkMode ? 'dark-mode' : ''}>
             <header>
                 <h1>Welcome to our Token Minter dApp.</h1>
@@ -116,4 +122,5 @@ function App() {
     );
 }
 
-export default App;
+//export default App;
+
