@@ -9,10 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// App.js
 const react_1 = require("react");
-const client_1 = require("@apollo/client"); // Import useQuery and gql from Apollo Client
-// Define the GraphQL query to fetch crypto prices
+const client_1 = require("@apollo/client");
 const GET_CRYPTO_PRICES = (0, client_1.gql) `
   query {
     cryptoPrices {
@@ -22,16 +20,18 @@ const GET_CRYPTO_PRICES = (0, client_1.gql) `
   }
 `;
 function App() {
-    const { loading, error, data } = (0, client_1.useQuery)(GET_CRYPTO_PRICES); // Use useQuery hook to fetch crypto prices
+    const { loading, error, data } = (0, client_1.useQuery)(GET_CRYPTO_PRICES);
     const [darkMode, setDarkMode] = (0, react_1.useState)(false);
     const [email, setEmail] = (0, react_1.useState)('');
     const [tokenAmount, setTokenAmount] = (0, react_1.useState)('');
     const [mintedAmount, setMintedAmount] = (0, react_1.useState)('');
     const [totalMinted, setTotalMinted] = (0, react_1.useState)(0);
     const mintingLimit = 5;
+    (0, react_1.useEffect)(() => {
+        document.body.classList.toggle('dark-mode', darkMode);
+    }, [darkMode]);
     const toggleDarkMode = () => {
         setDarkMode((prevDarkMode) => !prevDarkMode);
-        document.body.classList.toggle('dark-mode', darkMode);
     };
     const handleMinting = (event) => __awaiter(this, void 0, void 0, function* () {
         event.preventDefault();
@@ -82,9 +82,9 @@ function App() {
     Dark;
     Mode
         < /button>
-        < (/header>);
-    { /* Home Section */ }
-    id;
+        < /header>
+        < main >
+        id;
     "home" >
         href;
     "#home" > Home < /a>
@@ -100,18 +100,16 @@ function App() {
     enjoy;
     the;
     benefits < /p>
-        < /section>;
-    { /* Mint Section */ }
-    id;
-    "mint" >
+        < /section>
+        < section;
+    id = "mint" >
         Mint;
     Your;
     Tokens < /h2>
         < form;
     onSubmit = { handleMinting } >
-        { /* Input fields for email and token amount with enforced data types */}
-        < label;
-    htmlFor = "email" > Email;
+        htmlFor;
+    "email" > Email;
     /label>
         < input;
     type = "email";
@@ -135,21 +133,19 @@ onChange = {}(e);
 setTokenAmount(e.target.value);
 required
     /  >
-    { /* Mint button */}
-    < button;
-type = "submit" > Mint < /button>
+    type;
+"submit" > Mint < /button>
     < /form>
     < img;
 src = "/token minter.jpg";
 alt = "Token Image" /  >
-    /section>;
-{ /* About Section */ }
-id;
-"about" >
+    /section>
+    < section;
+id = "about" >
     href;
 "#about" > About;
-Us < (/a>);
-Learn;
+Us < /a>
+    < p > Learn;
 more;
 about;
 our;
@@ -163,15 +159,10 @@ the;
 world;
 of;
 token;
-minting.
-    < /p>
-    < /section>;
-{ /* Display Minted Amount */ }
-id;
-"mintedAmount" > { mintedAmount } < /div>;
-{ /* Crypto Prices Section */ }
-id;
-"cryptoPrices" >
+minting. < /p>
+    < /section>
+    < section;
+id = "cryptoPrices" >
     Crypto;
 Prices < /h2>;
 {
@@ -186,14 +177,20 @@ Prices < /h2>;
         error.message;
     }
     /p>;
-    ({ data, : .cryptoPrices.map((crypto) => key = { crypto, : .coin } >
+    ({ data, cryptoPrices, : .map((crypto) => key = { crypto, : .coin } >
             { crypto, : .coin.charAt(0).toUpperCase() + crypto.coin.slice(1) }, $, { crypto, : .usd }
             < /li>) }
         < /ul>);
 }
-/section>;
-{ /* ... (Your existing code) ... */ }
-/main>
+/section>
+    < div;
+id = "mintedAmount" > { mintedAmount } < /div>
+    < div > Total;
+Minted: {
+    totalMinted;
+}
+tokens < /div>
+    < /main>
     < footer >
     Contact;
 us;
@@ -203,9 +200,8 @@ at;
 }
 href;
 "mailto:hello@dProgrammingUniversity.com" > hello;
-/a>
-    < /p>
-    < p > Olukosi;
+/a></p >
+    Olukosi;
 I.B < /p>
     < /footer>
     < /div>;
