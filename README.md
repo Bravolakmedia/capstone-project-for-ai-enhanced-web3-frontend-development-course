@@ -29,7 +29,7 @@ Olukosi Ismaila Bamidele.
 
 ### SECTION 3 - JavaScript:
 
-1. I learnt about JavaScript data types like string, boolean, interger and float.
+1. I learnt about JavaScript data types like string, boolean, integer and float.
 2. I learnt about JavaScript variables, conditionals and loops.
 3. I learnt about how to use functions and scopes in JavaScript.
 4. I learnt about how to manipulate DOM and handle effects using JavaScript.
@@ -56,10 +56,18 @@ Olukosi Ismaila Bamidele.
 4. I learnt about the general best practice for clean coding in JavaScript.
 5. Challenges: I faced serious challenges doing my Capstone project for JavaScript, API and GraphQL. Each of them post different levels of challenges, starting from implementing React JS. My Token Minter dApp was responding to different media frames, toggling between normal and dark-mode before I implemented React JS which scattered my work. I spent several days to debug and correct the dApp. The same experience happened with API and GraphQL but I overcame the challenges with proper prompting of my ChatGPT.
 
+### SECTION 7 - TypeScript Crash Course:
+
+1. I learnt about global installation of TypeScript.
+2. I learnt how to compile TypeScript into JavaScript.
+3. I learnt about how TypeScript is useful in validating safety in coding.
+
+4. Challenges: I faced serious challenges doing my Capstone project for JavaScript, API and GraphQL. Each of them post different levels of challenges, starting from implementing React JS. My Token Minter dApp was responding to different media frames, toggling between normal and dark-mode before I implemented React JS which scattered my work. I spent several days to debug and correct the dApp. The same experience happened with API and GraphQL but I overcame the challenges with proper prompting of my ChatGPT.
+5. The components that are HTML parts of the React JS code in my Token Minter dApp throws individual error after transforming my app.js file into TypeScript file.
+
  ## MY WORKPLACE IMAGES:
-- ![GitHub Remote URL](media/image/TMReactFrontend.png)
-- ![GitHub Remote URL](media/image/backend_server.png)
-- ![GitHub Remote URL](media/image/TMReactJS.png)
-- ![GitHub Remote URL](media/image/APIcall.png)
-- ![GitHub Remote URL](media/image/TMAPIGQL.png)
-- ![GitHub Remote URL](media/image/TMAPIGQL2.png)
+- ![GitHub Remote URL](media/image/App.ts.png)
+- ![GitHub Remote URL](media/image/compiling%20tsfile.png)
+- ![GitHub Remote URL](media/image/apollo%20server.png)
+- ![GitHub Remote URL](media/image/MyReactApp.png)
+

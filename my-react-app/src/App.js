@@ -20,7 +20,7 @@ function App() {
   const [tokenAmount, setTokenAmount] = useState('');
   const [mintedAmount, setMintedAmount] = useState('');
   const [totalMinted, setTotalMinted] = useState(0);
-  const mintingLimit = 5;
+  const mintingLimit = 1000;
 
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
